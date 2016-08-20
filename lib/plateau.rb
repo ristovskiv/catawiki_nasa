@@ -18,5 +18,3 @@ class Plateau
     rover
   end
 end
-
-class RoverBoundariesError < StandardError; end

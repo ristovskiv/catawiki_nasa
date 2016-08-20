@@ -62,5 +62,3 @@ class Rover
     compass_point
   end
 end
-
-class CardinalCompassPointError < StandardError; end

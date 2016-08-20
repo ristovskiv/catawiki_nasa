@@ -32,5 +32,3 @@ class Remote
     instruction
   end
 end
-
-class InvalidInstruction < StandardError; end
