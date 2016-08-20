@@ -21,4 +21,49 @@ describe Rover do
     end
   end
 
+  context 'moving' do
+    let(:rover){ Rover.new(1,2, :N)}
+
+    describe 'east' do
+      it 'incremets x coordinate' do
+        expect{rover.go_east!}.to change(rover, :x).by(1)
+      end
+
+      it 'not change the y coordinate' do
+        expect{rover.go_east!}.not_to change(rover, :y)
+      end
+    end
+
+    describe 'west' do
+      it 'decrements x coordinate' do
+        expect{rover.go_west!}.to change(rover, :x).by(-1)
+      end
+
+      it 'not change the y coordinate' do
+        expect{rover.go_west!}.not_to change(rover, :y)
+      end
+    end
+
+    describe 'north' do
+      it 'not change x coordinate' do
+        expect{rover.go_north!}.not_to change(rover, :x)
+      end
+
+      it 'increments the y coordinate' do
+        expect{rover.go_north!}.to change(rover, :y).by(1)
+      end
+    end
+
+    describe 'south' do
+      it 'not change x coordinate' do
+        expect{rover.go_north!}.not_to change(rover, :x)
+      end
+
+      it 'decrements the y coordinate' do
+        expect{rover.go_south!}.to change(rover, :y).by(-1)
+      end
+    end
+
+  end
+
 end

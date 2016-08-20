@@ -9,6 +9,22 @@ class Rover
     @compass_point = validate_cardinal_compass_point(compass_point)
   end
 
+  def go_east!
+    @x+=1
+  end
+
+  def go_west!
+    @x-=1
+  end
+
+  def go_north!
+    @y+=1
+  end
+
+  def go_south!
+    @y-=1
+  end
+
   private
 
   def validate_cardinal_compass_point(compass_point)
