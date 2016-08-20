@@ -47,6 +47,10 @@ class Rover
     @y+=1
   end
 
+  def to_s
+    "#{x} #{y} #{compass_point}"
+  end
+
   def go_south!
     @y-=1
   end

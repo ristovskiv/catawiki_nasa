@@ -11,8 +11,6 @@ class Plateau
     @rovers << validate_rover_coordinates(rover)
   end
 
-  private
-
   def validate_rover_coordinates(rover)
     unless (lower_x..upper_x).include?(rover.x) && (lower_y..upper_y).include?(rover.y)
       raise RoverBoundariesError.new('Rover is out of the boundaries of the plateau')
