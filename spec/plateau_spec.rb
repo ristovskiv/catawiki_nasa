@@ -24,4 +24,5 @@ describe Plateau do
       end
     end
   end
+
 end
