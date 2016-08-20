@@ -102,3 +102,19 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 end
+
+def setup_fake_input(*args)
+  allow(App).to receive(:gets).and_return(*args)
+end
+
+def capture_output(&block)
+  original_stdout = $stdout.dup
+  output_catcher = StringIO.new
+  $stdout = output_catcher
+  begin
+    yield
+  ensure
+    $stdout = original_stdout
+  end
+  output_catcher.string
+end
