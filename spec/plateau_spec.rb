@@ -24,8 +24,8 @@ describe Plateau do
   end
 
   context 'adding rover' do
-    let(:rover_in_bounds){ Rover.new(0,5,'N') }
-    let(:rover_out_bounds){ Rover.new(0,6,'N')}
+    let(:rover_in_bounds){ Rover.new(0,5,:N) }
+    let(:rover_out_bounds){ Rover.new(0,6,:N)}
 
     describe 'in boundaries' do
       it 'increases rovers count' do

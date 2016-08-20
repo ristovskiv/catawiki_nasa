@@ -1,7 +1,7 @@
 class Rover
   attr_accessor :x, :y
 
-  CARDINAL_COMPASS_POINTS = %w(N E S W)
+  CARDINAL_COMPASS_POINTS = [:N, :E, :S, :W]
 
   def initialize(x, y, compass_point)
     @x = x
