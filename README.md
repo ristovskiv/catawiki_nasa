@@ -57,5 +57,8 @@ Expected Output:
 1 3 N
 5 1 E
 ```
+first run `bundle install`
 
-run the tests with 'rspec spec/'
+run the app with `ruby init.rb`
+
+run the tests with `rspec spec/`
