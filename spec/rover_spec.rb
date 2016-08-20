@@ -1,5 +1,3 @@
-require 'rover'
-
 describe Rover do
   let(:compass_points){ %w(N E S W) }
 
